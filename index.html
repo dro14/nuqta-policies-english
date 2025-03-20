@@ -6,55 +6,126 @@
     <title>Nuqta - Legal Documents</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #4a6bff 0%, #2541b8 100%);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            border-bottom: 5px solid #1a3091;
         }
         nav {
-            background: #444;
-            padding: 10px;
+            background: #2541b8;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 20px;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: rgba(255,255,255,0.2);
         }
         h1, h2, h3 {
-            color: #333;
+            color: #2541b8;
         }
         section {
             background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        .date-label {
+            background-color: #f0f4ff;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .content-block {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .content-block:last-child {
+            border-bottom: none;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #2541b8;
+            margin-bottom: 5px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2541b8;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        .back-to-top:hover {
+            background: #4a6bff;
+            transform: translateY(-3px);
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background: #333;
+            padding: 20px;
+            background: linear-gradient(135deg, #2541b8 0%, #1a3091 100%);
             color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        .toc {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .toc h4 {
+            margin-top: 0;
+        }
+        .toc ul {
+            padding-left: 20px;
+        }
+        .toc a {
+            color: #2541b8;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 600px) {
             .container {
@@ -64,89 +135,356 @@
                 display: block;
                 margin: 10px 0;
             }
+            section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Nuqta Legal Documents</h1>
+        <p>Important information about your rights and responsibilities</p>
     </header>
     <nav>
         <a href="#terms">Terms of Service</a>
         <a href="#privacy">Privacy Policy</a>
+        <a href="#contact">Contact Us</a>
     </nav>
     <div class="container">
         <section id="terms">
             <h2>Terms of Service</h2>
-            <p><strong>Last Updated: March 20, 2025</strong></p>
-            <h3>1. Introduction</h3>
-            <p>Welcome to Nuqta, a social networking app provided by ChuqurTech ("we," "us," or "our"). By accessing or using Nuqta, you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the app.</p>
+            <div class="date-label"><strong>Last Updated: March 20, 2025</strong></div>
+            
+            <div class="toc">
+                <h4>Table of Contents</h4>
+                <ul>
+                    <li><a href="#terms-1">Introduction</a></li>
+                    <li><a href="#terms-2">User Accounts</a></li>
+                    <li><a href="#terms-3">User Content</a></li>
+                    <li><a href="#terms-4">Prohibited Conduct</a></li>
+                    <li><a href="#terms-5">Termination</a></li>
+                    <li><a href="#terms-6">Disclaimer of Warranties</a></li>
+                    <li><a href="#terms-7">Limitation of Liability</a></li>
+                    <li><a href="#terms-8">Governing Law</a></li>
+                    <li><a href="#terms-9">Changes to Terms</a></li>
+                    <li><a href="#terms-10">Contact Us</a></li>
+                    <li><a href="#terms-11">User Responsibilities</a></li>
+                    <li><a href="#terms-12">Dispute Resolution</a></li>
+                    <li><a href="#terms-13">Frequently Asked Questions</a></li>
+                    <li><a href="#terms-14">Intellectual Property</a></li>
+                    <li><a href="#terms-15">Third-Party Services</a></li>
+                    <li><a href="#terms-16">App-Specific Terms</a></li>
+                </ul>
+            </div>
 
-            <h3>2. User Accounts</h3>
-            <p>You must be at least 13 years old to use Nuqta. You agree to provide accurate information when creating an account and to keep your login credentials secure. You are responsible for all activity under your account.</p>
+            <div id="terms-1" class="content-block">
+                <h3>1. Introduction</h3>
+                <p>Welcome to Nuqta, a social networking app provided by ChuqurTech ("we," "us," or "our"). By accessing or using Nuqta, you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the app.</p>
+                <p>These Terms constitute a legally binding agreement between you and ChuqurTech regarding your use of the Nuqta application and all related services. Please read them carefully.</p>
+            </div>
 
-            <h3>3. User Content</h3>
-            <p>You retain ownership of content you post (e.g., text messages, profile pictures). By posting, you grant ChuqurTech a worldwide, non-exclusive, royalty-free license to use, display, and distribute your content within Nuqta. We may remove content that violates these Terms.</p>
+            <div id="terms-2" class="content-block">
+                <h3>2. User Accounts</h3>
+                <p>You must be at least 13 years old to use Nuqta. You agree to provide accurate information when creating an account and to keep your login credentials secure. You are responsible for all activity under your account.</p>
+                <p>We reserve the right to refuse service, terminate accounts, or remove content at our discretion. You may not create multiple accounts or transfer your account to another person without our explicit permission.</p>
+            </div>
 
-            <h3>4. Prohibited Conduct</h3>
-            <p>You may not: (a) post offensive, illegal, or inappropriate content; (b) harass or harm others; (c) attempt unauthorized access to Nuqta systems; or (d) violate applicable laws.</p>
+            <div id="terms-3" class="content-block">
+                <h3>3. User Content</h3>
+                <p>You retain ownership of content you post (e.g., text messages, profile pictures). By posting, you grant ChuqurTech a worldwide, non-exclusive, royalty-free license to use, display, and distribute your content within Nuqta. We may remove content that violates these Terms.</p>
+                <p>This license allows us to make your content available to other users of the Service, and to use your content for Nuqta's operational purposes. We do not claim ownership rights in your content and nothing in these Terms restricts any rights that you may have to use and exploit your content.</p>
+            </div>
 
-            <h3>5. Termination</h3>
-            <p>We may suspend or terminate your account for violating these Terms. Upon termination, you must stop using Nuqta immediately.</p>
+            <div id="terms-4" class="content-block">
+                <h3>4. Prohibited Conduct</h3>
+                <p>You may not: (a) post offensive, illegal, or inappropriate content; (b) harass or harm others; (c) attempt unauthorized access to Nuqta systems; or (d) violate applicable laws.</p>
+                <p>Additionally, you agree not to:</p>
+                <ul>
+                    <li>Impersonate any person or entity or falsely state or misrepresent your affiliation with a person or entity</li>
+                    <li>Use the service for any illegal purpose or in violation of any local, state, national, or international law</li>
+                    <li>Interfere with or disrupt the Service or servers or networks connected to the Service</li>
+                    <li>Post violent, nude, partially nude, discriminatory, unlawful, hateful, pornographic or sexually suggestive content</li>
+                    <li>Create or submit unwanted communications, comments, or "spam" to any Nuqta users</li>
+                    <li>Use automated scripts to collect information from or otherwise interact with the Service</li>
+                </ul>
+            </div>
 
-            <h3>6. Disclaimer of Warranties</h3>
-            <p>Nuqta is provided "as is" without warranties of any kind. We do not guarantee uninterrupted or error-free service.</p>
+            <div id="terms-5" class="content-block">
+                <h3>5. Termination</h3>
+                <p>We may suspend or terminate your account for violating these Terms. Upon termination, you must stop using Nuqta immediately.</p>
+                <p>After termination, your content may remain visible to other users. We are not obligated to return any content to you after your account is terminated. All provisions of these Terms which by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, and limitations of liability.</p>
+            </div>
 
-            <h3>7. Limitation of Liability</h3>
-            <p>ChuqurTech is not liable for indirect, incidental, or consequential damages arising from your use of Nuqta, to the extent permitted by law.</p>
+            <div id="terms-6" class="content-block">
+                <h3>6. Disclaimer of Warranties</h3>
+                <p>Nuqta is provided "as is" without warranties of any kind. We do not guarantee uninterrupted or error-free service.</p>
+                <p>To the fullest extent permitted by law, ChuqurTech disclaims all warranties, express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We make no representations about the accuracy, reliability, completeness, or timeliness of the Service or content therein.</p>
+            </div>
 
-            <h3>8. Governing Law</h3>
-            <p>These Terms are governed by the laws of Uzbekistan. Disputes will be resolved in the courts of Uzbekistan.</p>
+            <div id="terms-7" class="content-block">
+                <h3>7. Limitation of Liability</h3>
+                <p>ChuqurTech is not liable for indirect, incidental, or consequential damages arising from your use of Nuqta, to the extent permitted by law.</p>
+                <p>In no event shall our total liability to you for all damages, losses, or causes of action exceed one hundred dollars ($100.00). Some jurisdictions do not allow the exclusion of certain warranties or the limitation or exclusion of liability for certain types of damages, so these limitations may not apply to you.</p>
+            </div>
 
-            <h3>9. Changes to Terms</h3>
-            <p>We may update these Terms and will notify you via the app or this page. Continued use after changes constitutes acceptance.</p>
+            <div id="terms-8" class="content-block">
+                <h3>8. Governing Law</h3>
+                <p>These Terms are governed by the laws of Uzbekistan. Disputes will be resolved in the courts of Uzbekistan.</p>
+                <p>You agree that any claim or dispute you have against ChuqurTech must be resolved by a court located in Uzbekistan. You agree to submit to the personal jurisdiction of the courts located in Uzbekistan for the purpose of litigating all such claims or disputes.</p>
+            </div>
 
-            <h3>10. Contact Us</h3>
-            <p>For questions, contact us at: <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a></p>
+            <div id="terms-9" class="content-block">
+                <h3>9. Changes to Terms</h3>
+                <p>We may update these Terms and will notify you via the app or this page. Continued use after changes constitutes acceptance.</p>
+                <p>It is your responsibility to review these Terms periodically for changes. If you do not agree to the amended terms, you must stop using Nuqta immediately.</p>
+            </div>
+
+            <div id="terms-10" class="content-block">
+                <h3>10. Contact Us</h3>
+                <p>For questions, contact us at: <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a></p>
+            </div>
+
+            <div id="terms-11" class="content-block">
+                <h3>11. User Responsibilities</h3>
+                <p>As a user of Nuqta, you are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.</p>
+                <p>You are also responsible for obtaining access to the Service and that access may involve third-party fees (such as Internet service provider or airtime charges). You are responsible for those fees, including those fees associated with the display or delivery of advertisements.</p>
+            </div>
+
+            <div id="terms-12" class="content-block">
+                <h3>12. Dispute Resolution</h3>
+                <p>In the event of a dispute, you agree to first attempt to resolve the issue informally by contacting us. If a resolution cannot be reached, disputes will be resolved through binding arbitration in accordance with the laws of Uzbekistan.</p>
+                <p>The arbitration will be conducted by a single, neutral arbitrator and shall take place in Tashkent, Uzbekistan, in the language of your choice. The arbitrator's decision shall be final and binding and may be entered as a judgment in any court of competent jurisdiction.</p>
+            </div>
+
+            <div id="terms-13" class="content-block">
+                <h3>13. Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <p class="faq-question">Q: Can I use Nuqta for commercial purposes?</p>
+                    <p>A: Nuqta is intended for personal use. Commercial use requires explicit permission from ChuqurTech.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Q: How do I report a violation?</p>
+                    <p>A: You can report violations via the app's support section or contact us directly at <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a>.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Q: What happens if I delete my account?</p>
+                    <p>A: When you delete your account, your profile, photos, videos, comments, and likes will be permanently removed. However, messages you have sent to other users may remain visible to them.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-question">Q: Can I recover my deleted account?</p>
+                    <p>A: Once an account is deleted, it cannot be recovered. Please consider this carefully before deleting your account.</p>
+                </div>
+            </div>
+
+            <div id="terms-14" class="content-block">
+                <h3>14. Intellectual Property</h3>
+                <p>The Nuqta name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of ChuqurTech or its affiliates. You must not use such marks without our prior written permission.</p>
+                <p>All other names, logos, product and service names, designs, and slogans on the Service are the trademarks of their respective owners. The Service may contain content owned or licensed by third parties, and all such third-party content and all intellectual property rights associated with it belong to the respective third parties.</p>
+            </div>
+
+            <div id="terms-15" class="content-block">
+                <h3>15. Third-Party Services</h3>
+                <p>Nuqta may contain links to third-party websites or services that are not owned or controlled by ChuqurTech. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
+                <p>You acknowledge and agree that ChuqurTech shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+            </div>
+
+            <div id="terms-16" class="content-block">
+                <h3>16. App-Specific Terms</h3>
+                <p>Nuqta is distributed through the Apple App Store and Google Play Store. By downloading Nuqta, you agree to comply with all applicable third-party terms of agreement, including those of the respective app stores.</p>
+                <p><strong>App Availability:</strong> We do not guarantee that Nuqta will always be available or function without disruptions or errors. We may suspend, withdraw, or restrict the availability of all or any part of the app for business and operational reasons.</p>
+                <p><strong>Device Compatibility:</strong> You are responsible for ensuring that your device meets the minimum requirements necessary to use Nuqta. We recommend keeping your device's operating system updated to the latest version.</p>
+            </div>
         </section>
 
         <section id="privacy">
             <h2>Privacy Policy</h2>
-            <p><strong>Last Updated: March 20, 2025</strong></p>
-            <h3>1. Introduction</h3>
-            <p>ChuqurTech ("we," "us," or "our") operates Nuqta, a social networking app. This Privacy Policy explains how we collect, use, and protect your information.</p>
+            <div class="date-label"><strong>Last Updated: March 20, 2025</strong></div>
+            
+            <div class="toc">
+                <h4>Table of Contents</h4>
+                <ul>
+                    <li><a href="#privacy-1">Introduction</a></li>
+                    <li><a href="#privacy-2">Information We Collect</a></li>
+                    <li><a href="#privacy-3">How We Use Your Information</a></li>
+                    <li><a href="#privacy-4">Sharing Your Information</a></li>
+                    <li><a href="#privacy-5">Your Choices and Controls</a></li>
+                    <li><a href="#privacy-6">Security</a></li>
+                    <li><a href="#privacy-7">Children's Privacy</a></li>
+                    <li><a href="#privacy-8">International Data Transfers</a></li>
+                    <li><a href="#privacy-9">Changes to This Policy</a></li>
+                    <li><a href="#privacy-10">Contact Us</a></li>
+                    <li><a href="#privacy-11">Data Protection Measures</a></li>
+                    <li><a href="#privacy-12">User Rights</a></li>
+                    <li><a href="#privacy-13">Data Retention</a></li>
+                    <li><a href="#privacy-14">Mobile App Technologies</a></li>
+                    <li><a href="#privacy-15">App Store Data Practices</a></li>
+                </ul>
+            </div>
 
-            <h3>2. Information We Collect</h3>
-            <p>We collect: (a) Email address (via Google or Apple login); (b) Profile information (name, username, birthday, biography); (c) Profile pictures and banner; (d) User-generated content (posts, replies, likes); (e) Interaction data; (f) Crash reports and analytics via Firebase.</p>
-            <p>We do not collect phone numbers or location data.</p>
+            <div id="privacy-1" class="content-block">
+                <h3>1. Introduction</h3>
+                <p>ChuqurTech ("we," "us," or "our") operates Nuqta, a social networking app. This Privacy Policy explains how we collect, use, and protect your information.</p>
+                <p>We are committed to protecting your privacy and handling your data in an open and transparent manner. This policy applies to information we collect when you use Nuqta or otherwise interact with us.</p>
+            </div>
 
-            <h3>3. How We Use Your Information</h3>
-            <p>We use your data to: (a) Provide and personalize Nuqta; (b) Analyze usage via Firebase Analytics; (c) Fix bugs via Firebase Crashlytics; (d) Serve ads via Google AdMob.</p>
+            <div id="privacy-2" class="content-block">
+                <h3>2. Information We Collect</h3>
+                <p>We collect: (a) Email address (via Google or Apple login); (b) Profile information (name, username, birthday, biography); (c) Profile pictures and banner; (d) User-generated content (posts, replies, likes); (e) Interaction data; (f) Crash reports and analytics via Firebase.</p>
+                <p>We do not collect phone numbers or location data.</p>
+                <p>We also collect:</p>
+                <ul>
+                    <li><strong>Device Information:</strong> Hardware model, operating system version, device identifiers, and network information</li>
+                    <li><strong>Usage Information:</strong> How you use Nuqta, including time spent in the app, features used, and interaction patterns</li>
+                    <li><strong>Log Information:</strong> App errors, app crashes, and general app performance metrics</li>
+                </ul>
+            </div>
 
-            <h3>4. Sharing Your Information</h3>
-            <p>We share data with: (a) Firebase (crash reports, analytics); (b) Google AdMob (advertising). See <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We do not share data with other third parties for marketing.</p>
+            <div id="privacy-3" class="content-block">
+                <h3>3. How We Use Your Information</h3>
+                <p>We use your data to: (a) Provide and personalize Nuqta; (b) Analyze usage via Firebase Analytics; (c) Fix bugs via Firebase Crashlytics; (d) Serve ads via Google AdMob.</p>
+                <p>Additionally, we use your information to:</p>
+                <ul>
+                    <li>Communicate with you about service-related announcements and updates</li>
+                    <li>Respond to your inquiries and provide customer support</li>
+                    <li>Develop new features, products, and services</li>
+                    <li>Prevent fraud and enforce our terms of service</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+            </div>
 
-            <h3>5. Your Choices and Controls</h3>
-            <p>You can access, update, or delete your data (including posts and images) via the app. Deleted data is permanently removed from our servers.</p>
+            <div id="privacy-4" class="content-block">
+                <h3>4. Sharing Your Information</h3>
+                <p>We share data with: (a) Firebase (crash reports, analytics); (b) Google AdMob (advertising). See <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We do not share data with other third parties for marketing.</p>
+                <p>We may also share information in the following circumstances:</p>
+                <ul>
+                    <li>With service providers who perform services on our behalf</li>
+                    <li>If required by law or in response to legal process</li>
+                    <li>To protect the rights, property, or safety of ChuqurTech, our users, or the public</li>
+                    <li>In connection with a merger, acquisition, or sale of all or a portion of our assets</li>
+                </ul>
+            </div>
 
-            <h3>6. Security</h3>
-            <p>We use reasonable measures to protect your data, but no method is 100% secure over the internet.</p>
+            <div id="privacy-5" class="content-block">
+                <h3>5. Your Choices and Controls</h3>
+                <p>You can access, update, or delete your data (including posts and images) via the app. Deleted data is permanently removed from our servers.</p>
+                <p>You can also:</p>
+                <ul>
+                    <li>Opt out of promotional communications</li>
+                    <li>Update or correct your personal information</li>
+                    <li>Request that we restrict the processing of your personal data</li>
+                    <li>Object to the processing of your personal data under certain circumstances</li>
+                    <li>Request a copy of your personal data in a structured, machine-readable format</li>
+                </ul>
+            </div>
 
-            <h3>7. Children's Privacy</h3>
-            <p>Nuqta is for users 13+. We do not knowingly collect data from children under 13 and will delete it if discovered.</p>
+            <div id="privacy-6" class="content-block">
+                <h3>6. Security</h3>
+                <p>We use reasonable measures to protect your data, but no method is 100% secure over the internet.</p>
+                <p>Our security practices include encrypted data storage, secure network architecture, regular security audits, and strict access controls for our employees. However, we cannot guarantee that unauthorized third parties will never be able to defeat our security measures or use your personal information for improper purposes.</p>
+            </div>
 
-            <h3>8. International Data Transfers</h3>
-            <p>Data may be transferred outside Uzbekistan (e.g., to Google servers in the US) and processed in compliance with this policy.</p>
+            <div id="privacy-7" class="content-block">
+                <h3>7. Children's Privacy</h3>
+                <p>Nuqta is for users 13+. We do not knowingly collect data from children under 13 and will delete it if discovered.</p>
+                <p>If you are a parent or guardian and believe we have collected information from a child under 13, please contact us immediately at <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a> and we will take steps to remove such information and terminate the child's account.</p>
+            </div>
 
-            <h3>9. Changes to This Policy</h3>
-            <p>We may update this policy and will post changes here. Continued use after changes constitutes acceptance.</p>
+            <div id="privacy-8" class="content-block">
+                <h3>8. International Data Transfers</h3>
+                <p>Data may be transferred outside Uzbekistan (e.g., to Google servers in the US) and processed in compliance with this policy.</p>
+                <p>When we transfer personal data outside of Uzbekistan, we ensure that appropriate safeguards are in place to ensure that your data is protected in accordance with this Privacy Policy. These safeguards may include data transfer agreements implementing standard data protection clauses.</p>
+            </div>
 
-            <h3>10. Contact Us</h3>
-            <p>For questions, contact us at: <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a></p>
+            <div id="privacy-9" class="content-block">
+                <h3>9. Changes to This Policy</h3>
+                <p>We may update this policy and will post changes here. Continued use after changes constitutes acceptance.</p>
+                <p>We will notify you of material changes to this Privacy Policy through the app or via email. We encourage you to periodically review this page for the latest information on our privacy practices.</p>
+            </div>
+
+            <div id="privacy-10" class="content-block">
+                <h3>10. Contact Us</h3>
+                <p>For questions, contact us at: <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a></p>
+            </div>
+
+            <div id="privacy-11" class="content-block">
+                <h3>11. Data Protection Measures</h3>
+                <p>We implement a variety of security measures to maintain the safety of your personal information. These include encryption, firewalls, and secure server facilities.</p>
+                <p>Our employees are trained on the importance of privacy and data security, and access to personal information is limited to those employees who need it to perform their job functions. We regularly review our information collection, storage, and processing practices to guard against unauthorized access to systems.</p>
+            </div>
+
+            <div id="privacy-12" class="content-block">
+                <h3>12. User Rights</h3>
+                <p>You have the right to access, correct, or delete your personal data. You can exercise these rights by contacting us at <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a>.</p>
+                <p>Depending on your location, you may have additional rights under applicable data protection laws. We will respond to your request within 30 days, or as otherwise required by applicable law.</p>
+            </div>
+
+            <div id="privacy-13" class="content-block">
+                <h3>13. Data Retention</h3>
+                <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+                <p>When we no longer need to use your information and there is no need for us to keep it to comply with our legal or regulatory obligations, we'll either remove it from our systems or depersonalize it so that we can't identify you.</p>
+            </div>
+
+            <div id="privacy-14" class="content-block">
+                <h3>14. Mobile App Technologies</h3>
+                <p>Nuqta, as a mobile application, uses various technologies to collect and store information:</p>
+                <ul>
+                    <li><strong>Device Identifiers:</strong> We use device identifiers (such as advertising IDs) to recognize your device</li>
+                    <li><strong>Local Storage:</strong> We store some information directly on your device to improve performance and user experience</li>
+                    <li><strong>Push Notifications:</strong> With your permission, we may send push notifications to your device</li>
+                    <li><strong>In-App Analytics:</strong> We collect usage data within the app to improve our service</li>
+                </ul>
+                <p>You can control most of these technologies through your device settings. For example, you can disable push notifications or reset your advertising ID through your device's settings menu.</p>
+            </div>
+
+            <div id="privacy-15" class="content-block">
+                <h3>15. App Store Data Practices</h3>
+                <p>When you download Nuqta from the App Store or Google Play Store, those platforms may collect certain information about you and your device as part of the download process. This collection is governed by Apple's and Google's respective privacy policies.</p>
+                <p>Nuqta complies with both Apple App Store and Google Play Store guidelines regarding user privacy and data collection. The App Privacy information we provide in these stores accurately reflects our data practices as described in this Privacy Policy.</p>
+                <p>For more information about how these app stores handle your information, please review:</p>
+                <ul>
+                    <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
+                    <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>If you have any questions about our Terms of Service or Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:nuqta@chuqurtech.uz">nuqta@chuqurtech.uz</a></li>
+                <li><strong>Address:</strong> ChuqurTech LLC, 123 Innovation Street, Tashkent, Uzbekistan</li>
+                <li><strong>Support Hours:</strong> Monday-Friday, 9:00 AM - 6:00 PM (Uzbekistan Time)</li>
+            </ul>
+            <p>For urgent matters, please include "URGENT" in your email subject line.</p>
         </section>
     </div>
+    <a href="#" class="back-to-top">↑</a>
     <footer>
         <p>&copy; 2025 ChuqurTech. All rights reserved.</p>
+        <p><a href="#terms" style="color: #fff; margin: 0 10px;">Terms</a> | <a href="#privacy" style="color: #fff; margin: 0 10px;">Privacy</a> | <a href="#contact" style="color: #fff; margin: 0 10px;">Contact</a></p>
     </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to top button visibility
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.querySelector('.back-to-top').style.display = "block";
+            } else {
+                document.querySelector('.back-to-top').style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
