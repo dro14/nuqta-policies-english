@@ -468,9 +468,18 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                if (this.getAttribute('href') === '#') {
+                    // Back to top functionality
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Normal anchor linking
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
@@ -482,6 +491,15 @@
                 document.querySelector('.back-to-top').style.display = "none";
             }
         };
+        
+        // Initialize back to top button visibility on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.querySelector('.back-to-top').style.display = "block";
+            } else {
+                document.querySelector('.back-to-top').style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>
