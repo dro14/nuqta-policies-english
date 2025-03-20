@@ -360,20 +360,20 @@
                 <p>We will notify you of material changes to this Privacy Policy through the app or via email. We encourage you to periodically review this page for the latest information on our privacy practices.</p>
             </div>
 
-            <div id="privacy-11" class="content-block">
-                <h3>11. Data Protection Measures</h3>
+            <div id="privacy-10" class="content-block">
+                <h3>10. Data Protection Measures</h3>
                 <p>We implement a variety of security measures to maintain the safety of your personal information. These include encryption, firewalls, and secure server facilities.</p>
                 <p>Our employees are trained on the importance of privacy and data security, and access to personal information is limited to those employees who need it to perform their job functions. We regularly review our information collection, storage, and processing practices to guard against unauthorized access to systems.</p>
             </div>
 
-            <div id="privacy-12" class="content-block">
-                <h3>12. Data Retention</h3>
+            <div id="privacy-11" class="content-block">
+                <h3>11. Data Retention</h3>
                 <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
                 <p>When we no longer need to use your information and there is no need for us to keep it to comply with our legal or regulatory obligations, we'll either remove it from our systems or depersonalize it so that we can't identify you.</p>
             </div>
 
-            <div id="privacy-13" class="content-block">
-                <h3>13. App Store Data Practices</h3>
+            <div id="privacy-12" class="content-block">
+                <h3>12. App Store Data Practices</h3>
                 <p>When you download Nuqta from the App Store or Google Play Store, those platforms may collect certain information about you and your device as part of the download process. This collection is governed by Apple's and Google's respective privacy policies.</p>
                 <p>Nuqta complies with both Apple App Store and Google Play Store guidelines regarding user privacy and data collection. The App Privacy information we provide in these stores accurately reflects our data practices as described in this Privacy Policy.</p>
                 <p>For more information about how these app stores handle your information, please review:</p>
@@ -399,18 +399,15 @@
     </footer>
 
     <script>
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 if (this.getAttribute('href') === '#') {
-                    // Back to top functionality
                     window.scrollTo({
                         top: 0,
                         behavior: 'smooth'
                     });
                 } else {
-                    // Normal anchor linking
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
@@ -418,7 +415,6 @@
             });
         });
 
-        // Back to top button visibility
         window.onscroll = function() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 document.querySelector('.back-to-top').style.display = "block";
@@ -427,7 +423,6 @@
             }
         };
         
-        // Initialize back to top button visibility on page load
         document.addEventListener('DOMContentLoaded', function() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 document.querySelector('.back-to-top').style.display = "block";
